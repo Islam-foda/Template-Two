@@ -5,7 +5,7 @@
   --main-color: #19c8fa;
   --transparent-color: #0f748fb3;
   --secondary-color: #2c4755;
-  --section-padding: 60px;
+  --section-padding: 100px;
   --paragraph-color: #777;
 }
 
@@ -13,6 +13,8 @@
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
   font-family: 'Open Sans', sans-serif;
   font-family: 'Work Sans', sans-serif;
 }
@@ -69,12 +71,30 @@ a {
 }
 
 /* End Global Varibles */
+/* start Componanet */
+@keyframes move {
+  0% {
+    transform: translateX(-70px);
+  }
+
+  50% {
+    transform: translateX(60px);
+    background-color: #19c8fa;
+  }
+
+  100% {
+    transform: translateX(-70px);
+  }
+
+}
+
+/* end Componanet */
 
 /***************************************************  */
 header {
   height: 100vh;
   background-color: #666;
-  background-image: url(/images/Header-img.webp);
+  background-image: url(../images/Header-img.webp);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -105,7 +125,7 @@ header .container {
 header .container::after {
   content: "";
   position: absolute;
-  bottom: 14%;
+  bottom: 10%;
   width: calc(100% - 30px);
   height: 1px;
   background-color: white;
@@ -255,7 +275,7 @@ header nav a.active {
 .landing .bullet {
   display: flex;
   position: absolute;
-  bottom: 10px;
+  bottom: 2em;
   left: 50%;
   transform: translateX(-50%);
   justify-content: space-between;
@@ -277,6 +297,11 @@ header nav a.active {
 /* End Landing */
 
 /* start Service */
+.services {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+}
+
 .section-heading {
   text-align: center;
 }
@@ -312,28 +337,30 @@ header nav a.active {
   border-color: #333;
   border: 2px solid #333;
   bottom: -2.5rem;
+  animation: move 1.8s linear infinite;
 }
+
 
 .section-heading p {
   margin: 0 auto 100px;
-  width: 500px;
   line-height: 2;
   color: var(--paragraph-color);
 }
 
-.services .service-all {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-  grid-column-gap: 50px;
-  grid-row-gap: 40px;
+@media (min-width:768px) {
+  .services .service-all {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-column-gap: 50px;
+    grid-row-gap: 40px;
+  }
 }
 
 .services .srv-box {
   display: flex;
- 
 }
 
-@media (max-width:778px) {
+@media (max-width:768px) {
   .services .srv-box {
     display: flex;
     flex-direction: column;
@@ -341,10 +368,15 @@ header nav a.active {
     align-items: center;
     text-align: center;
   }
+
+  .services .srv-box .text {
+    margin-top: 20px;
+  }
 }
 
 .services .srv-box .text {
-  margin-left: 2rem
+  margin-left: 2.5rem;
+  line-height: 2;
 }
 
 .services .srv-box h3 {
@@ -354,6 +386,82 @@ header nav a.active {
 .services .srv-box p {
   color: var(--paragraph-color);
   margin-bottom: 40px;
+  margin-top: 20px;
 }
 
 /* ُEnd Service */
+/* Start Design */
+.design {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-image: url(../images/design-features.jpg);
+  background-color: #093272;
+  height: 600px;
+  overflow: hidden;
+}
+
+.design::after {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgb(0 0 0 / 60%);
+}
+
+.design .mobile,
+.design .text {
+  position: relative;
+  flex: 1;
+  z-index: 3;
+}
+
+.design .mobile {
+  text-align: center;
+}
+
+.design .mobile img {
+  position: relative;
+  bottom: -150px;
+}
+
+@media (max-width:768px) {
+  .design .mobile img {
+    display: none;
+  }
+  .design .text{
+    flex-basis: 100%;
+  }
+}
+
+.design .text {
+  width: 50%;
+  color: white;
+  background-color: var(--transparent-color);
+
+  padding: 50px;
+}
+
+.design .text h3 {
+  font-size: 32px;
+  line-height: 1.5;
+  font-weight: normal;
+  margin-bottom: 20px;
+}
+
+.design .text ul li {
+  position: relative;
+  padding: 20px 0;
+}
+
+.design .text ul li::before {
+  position: relative;
+  font-family: 'Font Awesome 6 free';
+  content: '\f390';
+  font-weight: 900;
+  margin-right: 20px;
+}
+
+/* End Design */
