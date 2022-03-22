@@ -360,22 +360,27 @@ header nav a.active {
   display: flex;
 }
 
+.services .srv-box i {
+  margin-right: 2.5rem;
+}
+
 @media (max-width:768px) {
   .services .srv-box {
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
+
     align-items: center;
     text-align: center;
   }
 
   .services .srv-box .text {
     margin-top: 20px;
+
   }
 }
 
 .services .srv-box .text {
-  margin-left: 2.5rem;
+
   line-height: 2;
 }
 
@@ -431,7 +436,8 @@ header nav a.active {
   .design .mobile img {
     display: none;
   }
-  .design .text{
+
+  .design .text {
     flex-basis: 100%;
   }
 }
@@ -466,8 +472,9 @@ header nav a.active {
 
 /* End Design */
 /* Start portfolio */
-.portfolio{
+.portfolio {
   padding-top: var(--section-padding);
   padding-bottom: var(--section-padding);
 }
+
 /* End portfolio */
