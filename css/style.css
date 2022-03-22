@@ -1,6 +1,7 @@
 /* Global Varibles */
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&family=Work+Sans:wght@200;300;400;500;600;700;800&display=swap');
+
 :root {
     --main-color: #19c8fa;
     --transparent-color: #0f748fb3;
@@ -81,13 +82,29 @@ a {
     0% {
         transform: translateX(-70px);
     }
+
     50% {
         transform: translateX(60px);
         background-color: #19c8fa;
     }
+
     100% {
         transform: translateX(-70px);
     }
+}
+
+.up a {
+    position: fixed;
+    padding: 10px;
+    color: white;
+    background-color: var(--main-color);
+    z-index: 5;
+    bottom: 10px;
+    right: 20px;
+    border-radius: 8px;
+    text-transform: capitalize;
+    cursor: pointer;
+
 }
 
 
@@ -192,6 +209,7 @@ header nav a.active {
         display: none;
         padding-left: 0px;
     }
+
     header nav .small-scr:hover+.links ul {
         display: flex;
         flex-direction: column;
@@ -201,6 +219,7 @@ header nav a.active {
         width: 100%;
         background-color: rgb(0 0 0 / 50%);
     }
+
     header nav a {
         padding: 15px !important;
     }
@@ -238,9 +257,11 @@ header nav a.active {
     .landing .text {
         width: 100%;
     }
+
     .landing .text .content {
         max-width: 100%;
     }
+
     .landing i {
         display: none;
     }
@@ -375,9 +396,11 @@ header nav a.active {
         align-items: center;
         text-align: center;
     }
+
     .services .srv-box .text {
         margin-top: 20px;
     }
+
     .services .srv-box i {
         margin: 0;
     }
@@ -443,6 +466,7 @@ header nav a.active {
     .design .mobile img {
         display: none;
     }
+
     .design .text {
         flex-basis: 100%;
     }
@@ -475,16 +499,27 @@ header nav a.active {
     margin-right: 20px;
 }
 
-
 /* End Design */
-
-
 /* Start portfolio */
-
 .portfolio {
     padding-top: var(--section-padding);
     padding-bottom: var(--section-padding);
 }
 
+.portfolio .gallery {
+    display: flex;
+    justify-content: center;
+
+}
+
+.portfolio .gallery li {
+    padding: 10px;
+}
+
+.portfolio .gallery .active {
+    background-color: var(--main-color);
+    color: white;
+
+}
 
 /* End portfolio */
