@@ -521,12 +521,13 @@ header nav a.active {
     padding: 10px;
 }
 
-.portfolio .gallery .active, .portfolio .gallery li:hover{
+.portfolio .gallery .active,
+.portfolio .gallery li:hover {
     background-color: var(--main-color);
     color: white;
     border-bottom: 2px solid var(--secondary-color);
     cursor: pointer;
- }
+}
 
 .portfolio .image-gallery {
     display: flex;
@@ -581,7 +582,8 @@ header nav a.active {
 .portfolio .image-gallery .box .caption p {
     color: var(--main-color);
 }
-.portfolio button{
+
+.portfolio button {
     background-color: var(--main-color);
     color: white;
     text-transform: uppercase;
@@ -593,14 +595,14 @@ header nav a.active {
     left: 50%;
     transform: translate(-50%);
 }
+
 /* End portfolio */
 /* Start Video */
-.video{
+.video {
     position: relative;
 }
-.awesome-video {
-   
-}
+
+.awesome-video {}
 
 .awesome-video::after {
     position: absolute;
@@ -611,9 +613,11 @@ header nav a.active {
     left: 0;
     background-color: rgb(0 0 0 / 60%);
 }
-.awesome-video video{
+
+.awesome-video video {
     max-width: 100%;
 }
+
 .video .text {
     position: absolute;
     width: 100%;
@@ -627,6 +631,31 @@ header nav a.active {
     align-items: center;
     flex-direction: column;
     line-height: 3;
-    
 }
+
+.video .text h3 {
+    font-weight: normal;
+    font-size: 28px;
+}
+
+.video .text p:last-child {
+    background-color: black;
+    text-transform: uppercase;
+    padding: 0 20px;
+}
+@media (max-width:650px) {
+    .video .text {
+        padding: 15px;
+    }
+
+    .video .text p:last-child {
+        
+        font-size: 12px;
+    }
+
+    .video .text h3 {
+        font-size: 16px;
+    }
+}
+
 /* End Video */
