@@ -1037,7 +1037,8 @@ margin-right: 50px;
     position: relative;
     display: flex;
     align-items: center;
-    flex-direction: column;
+    justify-content: center;
+    gap: 5em;
 }
 .subscribe::after{
     position: absolute;
@@ -1051,11 +1052,43 @@ margin-right: 50px;
 .subscribe form{
     position: relative;
     z-index: 2;
+    border: 2px solid white;
+    padding: 20px;
+    margin: 0;
+    flex-basis: 25%;
+    display: flex;
 }
-s
+.subscribe form i{
+    color: white;
+    font-size: 25px;
+}
+.subscribe form input[type='email']{
+background-color: transparent;
+border: transparent;
+margin-left: 20px;
+width: 100%;
+}
+.subscribe form input[type='email']:focus{
+    outline: none;
+}
+.subscribe form input[type='email']:focus:focus-within{
+    color: white;
+}
+.subscribe form input[type='submit']{
+position: absolute;
+right: 0;
+top: 0;
+padding: 23px;
+color: #fff;
+background-color: var(--main-color);
+outline: none;
+border: none;
+}
+
 .subscribe p{
     color: white;
     z-index: 2;
-    margin-top: 30px;
+    flex-basis: 40%;
+    font-size: 20px;
 }
 /* End Sunscribe */
