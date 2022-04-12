@@ -1053,19 +1053,23 @@ margin-right: 50px;
     position: relative;
     z-index: 2;
     border: 2px solid white;
-    padding: 20px;
     margin: 0;
     flex-basis: 25%;
     display: flex;
+    align-content: center;
+    justify-content: space-between;
 }
 .subscribe form i{
     color: white;
     font-size: 25px;
+    margin: 7.5px 15px 0 15px;
+    transition: 2.3s;
+    position: relative;
+   
 }
 .subscribe form input[type='email']{
 background-color: transparent;
 border: transparent;
-margin-left: 20px;
 width: 100%;
 }
 .subscribe form input[type='email']:focus{
@@ -1075,20 +1079,41 @@ width: 100%;
     color: white;
 }
 .subscribe form input[type='submit']{
-position: absolute;
-right: 0;
-top: 0;
-padding: 23px;
+padding: 10px 10px;
+border: 1px solid white;
+border-left: none;
 color: #fff;
 background-color: var(--main-color);
-outline: none;
-border: none;
 }
-
 .subscribe p{
     color: white;
     z-index: 2;
     flex-basis: 40%;
     font-size: 20px;
+}
+@media (max-width:992px) {
+   .subscribe{
+    flex-wrap: wrap;
+    gap: 30px;
+   }
+    .subscribe form{
+        flex-basis: 50%;
+    }
+    .subscribe p{
+        flex-basis: 70%;
+    }
+}
+@media (max-width:450px) {
+   .subscribe{
+    justify-content: center;
+   }
+   .subscribe i{
+       left: -60px;
+   }
+    
+.subscribe form input[type='email']{
+    margin: 0 -30px;
+    width: 210px;
+   
 }
 /* End Sunscribe */
