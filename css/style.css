@@ -1185,3 +1185,51 @@ background-color: var(--main-color);
     }
 
 /* End Contact-us */
+/* Start Footer */
+footer{
+    position: relative;
+    padding-bottom: calc(var(--section-padding)/2);
+    background-image: url(../images/subscribe.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+footer::after{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: hsl(0deg 0% 0% / 69%);
+}
+footer .container{
+    position: relative;
+    color: white;
+    z-index: 2;
+    text-align: center;
+    
+}
+footer .container img{
+   margin: 40px auto;
+}
+footer .container p{
+    margin: 10px auto;
+    font-size: 24px;
+    padding: 20px;
+    text-transform: uppercase;
+    width: fit-content;
+    border-bottom: 1px solid white;
+}
+footer .container .social i{
+    padding: 15px;
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+footer .container .copy{
+    text-transform: capitalize;   
+}
+footer .container .copy span{
+    color: var(--main-color);
+}
+/* End Footer */
